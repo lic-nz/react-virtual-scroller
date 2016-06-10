@@ -293,7 +293,7 @@ class Scroller extends Component {
     if (dom){
       const height = dom.style.height
 
-      dom.style.height = height == '0.2px'? '0.1px': '0.2px'
+      dom.style.height = '1px'
     }
   }
 
