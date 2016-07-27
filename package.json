@@ -50,13 +50,13 @@
   "dependencies": {
     "drag-helper": "^1.2.3",
     "has-touch": "^1.0.1",
-    "object-assign": "^4.0.1",
-    "react-class": "^1.1.2",
-    "react-load-mask": "^1.0.1",
+    "object-assign": "^4.1.0",
+    "react-class": "^2.1.0",
+    "react-load-mask": "^2.0.1",
     "react-style-normalizer": "^1.2.7"
   },
   "peerDependencies": {
-    "react": ">=0.14.0",
-    "react-dom": ">=0.14.0"
+    "react": ">=0.14.0 || >=15.0.0-0",
+    "react-dom": ">=0.14.0 || >=15.0.0-0"
   }
 }
