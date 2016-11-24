@@ -54,7 +54,7 @@
     "has-touch": "^1.0.1",
     "object-assign": "^4.1.0",
     "react-class": "^2.1.0",
-    "react-load-mask": "^2.0.3-lic.0",
+    "react-load-mask": "2.0.3-lic.0",
     "react-style-normalizer": "^1.2.7"
   },
   "peerDependencies": {
