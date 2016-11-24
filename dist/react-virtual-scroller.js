@@ -446,7 +446,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var style = horizontalScrollbarStyle;
 	      var minWidth = props.scrollWidth;
 
-	      var scroller = _react2['default'].createElement('div', { xref: 'horizontalScroller', className: 'z-horizontal-scroller', style: { width: minWidth } });
+	      var scroller = _react2['default'].createElement('div', { className: 'z-horizontal-scroller', style: { width: minWidth } });
 
 	      if (IS_MAC) {
 	        //needed for mac safari
@@ -863,7 +863,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	LoadMask.defaultProps = {
-	  visibile: false,
+	  visible: false,
 	  theme: 'default'
 	};
 

@@ -341,7 +341,7 @@ class Scroller extends Component {
     var style    = horizontalScrollbarStyle
     var minWidth = props.scrollWidth
 
-    var scroller = <div xref="horizontalScroller" className="z-horizontal-scroller" style={{width: minWidth}} />
+    var scroller = <div className="z-horizontal-scroller" style={{width: minWidth}} />
 
     if (IS_MAC){
         //needed for mac safari
