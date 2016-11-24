@@ -1,6 +1,6 @@
 {
   "name": "react-virtual-scroller",
-  "version": "2.1.4-lic.2",
+  "version": "2.1.4-lic.3",
   "description": "A virtual scroller container for React",
   "main": "lib/index.js",
   "scripts": {
@@ -42,6 +42,8 @@
     "extract-text-webpack-plugin": "^0.7.0",
     "gulp": "^3.8.11",
     "gulp-babel": "^5.1.0",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "style-loader": "^0.12.1",
     "stylus-loader": "^1.1.0",
     "webpack": "^1.8.10",
@@ -52,7 +54,7 @@
     "has-touch": "^1.0.1",
     "object-assign": "^4.1.0",
     "react-class": "^2.1.0",
-    "react-load-mask": "^2.0.1",
+    "react-load-mask": "^2.0.3-lic.0",
     "react-style-normalizer": "^1.2.7"
   },
   "peerDependencies": {
