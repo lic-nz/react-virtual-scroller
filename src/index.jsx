@@ -118,6 +118,58 @@ const onScroll = function(orientation){
   }
 }
 
+const propTypes = {
+  loadMask: PT.oneOfType([
+    PT.bool,
+    PT.func
+  ]),
+
+  loading : PT.bool,
+  normalizeStyles: PT.bool,
+
+  scrollTop : PT.number,
+  scrollLeft: PT.number,
+
+  scrollWidth : PT.number.isRequired,
+  scrollHeight: PT.number.isRequired,
+
+  height: PT.number,
+  width : PT.number,
+
+  minScrollStep          : PT.number,
+  minHorizontalScrollStep: PT.number,
+  minVerticalScrollStep  : PT.number,
+
+  virtualRendering: PT.oneOf([true]),
+  scrollbarSize: PT.number,
+
+  preventDefaultVertical: PT.bool,
+  preventDefaultHorizontal: PT.bool,
+
+  onMount: PT.func,
+  onHorizontalScroll: PT.func,
+  onVerticalScroll: PT.func,
+}
+
+const defaultProps = {
+  'data-display-name': DISPLAY_NAME,
+  loadMask: true,
+
+  virtualRendering: true, //FOR NOW, only true is supported
+  scrollbarSize: 20,
+
+  scrollTop : 0,
+  scrollLeft: 0,
+
+  minScrollStep: 10,
+
+  minHorizontalScrollStep: IS_FIREFOX? 40: 1,
+
+  //since FF goes back in browser history on scroll too soon
+  //chrome and others also do this, but the normal preventDefault in syncScrollbar fn prevents this
+  preventDefaultHorizontal: IS_FIREFOX
+}
+
 /**
  * The scroller can have a load mask (loadMask prop is true by default),
  * you just need to specify loading=true to see it in action
@@ -174,8 +226,9 @@ class Scroller extends Component {
   prepareRenderProps(props) {
     var renderProps = assign({}, props)
 
-    delete renderProps.height
-    delete renderProps.width
+    Object.keys(propTypes).forEach(propKey => {
+        delete renderProps[propKey]
+    })
 
     return renderProps
   }
@@ -447,51 +500,7 @@ assign(Scroller.prototype, {
   syncVerticalScrollbar  : syncVerticalScrollbar
 })
 
-Scroller.propTypes = {
-  loadMask: PT.oneOfType([
-    PT.bool,
-    PT.func
-  ]),
-
-  loading : PT.bool,
-  normalizeStyles: PT.bool,
-
-  scrollTop : PT.number,
-  scrollLeft: PT.number,
-
-  scrollWidth : PT.number.isRequired,
-  scrollHeight: PT.number.isRequired,
-
-  height: PT.number,
-  width : PT.number,
-
-  minScrollStep          : PT.number,
-  minHorizontalScrollStep: PT.number,
-  minVerticalScrollStep  : PT.number,
-
-  virtualRendering: PT.oneOf([true]),
-
-  preventDefaultVertical: PT.bool,
-  preventDefaultHorizontal: PT.bool
-},
-
-Scroller.defaultProps = {
-  'data-display-name': DISPLAY_NAME,
-  loadMask: true,
-
-  virtualRendering: true, //FOR NOW, only true is supported
-  scrollbarSize: 20,
-
-  scrollTop : 0,
-  scrollLeft: 0,
-
-  minScrollStep: 10,
-
-  minHorizontalScrollStep: IS_FIREFOX? 40: 1,
-
-  //since FF goes back in browser history on scroll too soon
-  //chrome and others also do this, but the normal preventDefault in syncScrollbar fn prevents this
-  preventDefaultHorizontal: IS_FIREFOX
-}
+Scroller.propTypes = propTypes
+Scroller.defaultProps = defaultProps
 
 export default Scroller
