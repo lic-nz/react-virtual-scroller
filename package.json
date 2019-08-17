@@ -1,6 +1,6 @@
 {
   "name": "react-virtual-scroller",
-  "version": "2.1.4-lic.4",
+  "version": "2.1.4-lic.5",
   "description": "A virtual scroller container for React",
   "main": "lib/index.js",
   "scripts": {
@@ -61,5 +61,8 @@
   "peerDependencies": {
     "react": ">=0.14.0 || >=15.0.0-0",
     "react-dom": ">=0.14.0 || >=15.0.0-0"
+  },
+  "publishConfig": {
+    "registry": "http://nuget.lic.co.nz/npm/NPM"
   }
 }
