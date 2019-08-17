@@ -45,6 +45,7 @@
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "style-loader": "^0.12.1",
+    "stylus": "^0.54.5",
     "stylus-loader": "^1.1.0",
     "webpack": "^1.8.10",
     "webpack-dev-server": "^1.8.2"
@@ -53,8 +54,8 @@
     "drag-helper": "^1.2.3",
     "has-touch": "^1.0.1",
     "object-assign": "^4.1.0",
+    "prop-types": "^15.7.2",
     "react-class": "^2.1.0",
-    "react-load-mask": "2.0.3-lic.0",
     "react-style-normalizer": "^1.2.7"
   },
   "peerDependencies": {
