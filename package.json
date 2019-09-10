@@ -1,5 +1,5 @@
 {
-  "name": "react-virtual-scroller",
+  "name": "@licnz/react-virtual-scroller",
   "version": "2.1.4-lic.5",
   "description": "A virtual scroller container for React",
   "main": "lib/index.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zippyui/react-virtual-scroller.git"
+    "url": "https://github.com/lic-nz/react-virtual-scroller.git"
   },
   "keywords": [
     "react",
@@ -30,9 +30,9 @@
   "author": "ZippyUI <contact@zippyui.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zippyui/react-virtual-scroller/issues"
+    "url": "https://github.com/lic-nz/react-virtual-scroller/issues"
   },
-  "homepage": "https://github.com/zippyui/react-virtual-scroller",
+  "homepage": "https://github.com/lic-nz/react-virtual-scroller",
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
     "babel": "^5.1.13",
@@ -63,6 +63,6 @@
     "react-dom": ">=0.14.0 || >=15.0.0-0"
   },
   "publishConfig": {
-    "registry": "http://nuget.lic.co.nz/npm/NPM"
+    "registry": "https://npm-proxy.fury.io/licnz/"
   }
 }
