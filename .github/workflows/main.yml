@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 10
           registry-url: https://npm-proxy.fury.io/licnz/
-          scope: licnz
+          scope: '@licnz'
       - run: npm ci
       - run: npm run build
       - run: npm publish
