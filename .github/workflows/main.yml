@@ -30,8 +30,9 @@ jobs:
         with:
           node-version: 10
       - run: |
-          echo -e "//npm.fury.io/licnz/:_authToken=${NODE_AUTH_TOKEN}\nalways-auth=true" > $RUNNER_TEMP/.npmrc
-          cat $RUNNER_TEMP/.npmrc
+          rm $RUNNER_TEMP/.npmrc
+          echo -e "//npm.fury.io/licnz/:_authToken=${NODE_AUTH_TOKEN}\nalways-auth=true" > ~/.npmrc
+          cat ~/.npmrc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm ci
