@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: 10
       - run: |
-          echo -e "//npm-proxy.fury.io/licnz/:_authToken=$NODE_AUTH_TOKEN\nalways-auth=true" > ~/.npmrc
+          echo -e "//npm-proxy.fury.io/licnz/:_authToken=$NODE_AUTH_TOKEN\nalways-auth=true" > $RUNNER_TEMP/.npmrc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm ci
