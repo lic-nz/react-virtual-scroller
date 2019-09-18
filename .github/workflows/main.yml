@@ -33,7 +33,7 @@ jobs:
 
       - name: Publish to GemFury
         run: |
-          newVersion=v$(node -e "console.log(require('./package.json').version)")
+          newVersion=$(node -e "console.log(require('./package.json').version)")
           existingVersion=$(npm view @licnz/react-virtual-scroller@$newVersion version)
           if [ $existingVersion != $newVersion ]; then
             echo "Version $newVersion hasn't been published yet!"
