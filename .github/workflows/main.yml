@@ -19,6 +19,8 @@ jobs:
         with:
           node-version: 10
       - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run build
 
   publish-npm:
@@ -33,6 +35,8 @@ jobs:
           registry-url: "https://npm-proxy.fury.io/licnz/"
           scope: "@licnz"
       - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run build
       - run: npm publish
         env:
