@@ -3,9 +3,10 @@
 import Component from 'react-class'
 
 import React from 'react';
+import PT from 'prop-types';
 import { findDOMNode } from 'react-dom';
 
-const LoadMask   = require('react-load-mask')
+const LoadMask   = () => null;
 const assign     = require('object-assign')
 const DragHelper = require('drag-helper')
 const normalize  = require('react-style-normalizer')
@@ -28,7 +29,6 @@ if (IS_MAC){
   horizontalScrollbarStyle.height   = 20
 }
 
-const PT = React.PropTypes
 const DISPLAY_NAME = 'Scroller'
 
 const ON_OVERFLOW_NAMES = {
